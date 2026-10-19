@@ -1,0 +1,59 @@
+// ==========================================================================
+// 1. VARIABLES (Bảng biến toàn cục)
+// ==========================================================================
+
+// Màu sắc chủ đạo (Brand & Theme Colors)
+$primary-color: #2563eb;          // Xanh dương công nghệ hiện đại
+$primary-hover: #1d4ed8;          // Xanh dương đậm khi hover
+$secondary-color: #06b6d4;        // Xanh ngọc Cyan năng động
+$accent-color: #f59e0b;           // Vàng cam tạo điểm nhấn
+$accent-star: #fbbf24;            // Màu vàng sao đánh giá
+
+// Màu sắc giao diện (Neutrals & Dark/Light)
+$dark-bg: #0f172a;                // Xanh đen Slate đậm cho Footer & Statistics
+$dark-surface: #1e293b;           // Nền khối trong chế độ tối
+$light-bg: #f8fafc;               // Xám sáng dịu mắt cho nền trang
+$white: #ffffff;                  // Trắng tinh khôi
+$border-color: #e2e8f0;           // Màu đường viền nhẹ nhàng
+
+// Màu văn bản (Text Colors)
+$text-dark: #1e293b;              // Chữ chính đậm rõ nét
+$text-muted: #64748b;             // Chữ phụ mờ vừa phải
+$text-light: #f8fafc;             // Chữ sáng trên nền tối
+
+// Huy hiệu sản phẩm (Badges)
+$badge-hot: #ef4444;              // Đỏ cho sản phẩm bán chạy
+$badge-new: #10b981;              // Xanh lá cho sản phẩm mới
+$badge-discount: #f97316;         // Cam cho giảm giá
+
+// Typography
+$font-family: 'Inter', system-ui, -apple-system, sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.6;
+
+// Layout & Spacings
+$container-max-width: 1200px;
+$container-padding: 24px;
+$section-padding: 80px 0;
+
+// Border Radius
+$radius-sm: 6px;
+$radius-md: 12px;
+$radius-lg: 20px;
+$radius-full: 9999px;
+
+// Shadows
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Breakpoints
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;

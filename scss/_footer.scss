@@ -1,0 +1,199 @@
+// ==========================================================================
+// 8. FOOTER (Phần chân trang đa cột)
+// ==========================================================================
+
+.footer {
+  background-color: #0b1120;
+  color: rgba($white, 0.7);
+  padding-top: 80px;
+  border-top: 1px solid rgba($white, 0.08);
+
+  // Khung 4 cột phía trên
+  &__top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+    gap: 40px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba($white, 0.08);
+
+    @include respond-to('desktop') {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    @include respond-to('mobile') {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+  }
+
+  // Cột 1: Thông tin thương hiệu
+  &__logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: $white;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+
+    i, span {
+      color: $secondary-color;
+    }
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  // Mạng xã hội
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    a {
+      width: 40px;
+      height: 40px;
+      border-radius: $radius-full;
+      background-color: rgba($white, 0.08);
+      color: $white;
+      @include flex-center;
+      @include transition-all;
+
+      &:hover {
+        background-color: $primary-color;
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  // Tiêu đề cột
+  &__heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: $white;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 32px;
+      height: 2px;
+      background-color: $secondary-color;
+    }
+  }
+
+  // Danh sách liên kết
+  &__links {
+    li {
+      margin-bottom: 12px;
+
+      a {
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        i {
+          font-size: 10px;
+          color: $secondary-color;
+          @include transition-all;
+        }
+
+        &:hover {
+          color: $white;
+          transform: translateX(4px);
+
+          i {
+            transform: translateX(2px);
+          }
+        }
+      }
+    }
+  }
+
+  // Khung dưới cùng: Bản quyền
+  &__bottom {
+    padding: 24px 0;
+    @include flex-between;
+    font-size: 13px;
+
+    @include respond-to('tablet') {
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+    }
+
+    p {
+      color: rgba($white, 0.6);
+    }
+
+    &-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      a {
+        color: rgba($white, 0.6);
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+
+      span {
+        color: rgba($white, 0.3);
+      }
+    }
+  }
+}
+
+// Form đăng ký nhận tin (Newsletter Form)
+.newsletter-form {
+  &__group {
+    display: flex;
+    align-items: center;
+    border-radius: $radius-md;
+    overflow: hidden;
+    background-color: rgba($white, 0.08);
+    border: 1px solid rgba($white, 0.15);
+    padding: 4px;
+  }
+
+  &__input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px 14px;
+    color: $white;
+    font-size: 14px;
+
+    &::placeholder {
+      color: rgba($white, 0.4);
+    }
+  }
+
+  &__btn {
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    outline: none;
+    padding: 10px 18px;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    @include transition-all;
+
+    &:hover {
+      background-color: $primary-hover;
+      transform: scale(1.05);
+    }
+  }
+}

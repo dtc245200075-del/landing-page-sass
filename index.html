@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Landing Page Thiết Kế Sẵn (SASS Refactored)</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Compiled CSS from SASS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1. NAVIGATION & HEADER -->
+    <header class="header" id="home">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="container navbar__container">
+                <a href="#home" class="navbar__logo">
+                    <i class="fa-solid fa-cube"></i> Tech<span>Store</span>
+                </a>
+                <ul class="navbar__menu" id="navMenu">
+                    <li class="navbar__item"><a href="#home" class="navbar__link active">Trang chủ</a></li>
+                    <li class="navbar__item"><a href="#products" class="navbar__link">Sản phẩm nổi bật</a></li>
+                    <li class="navbar__item"><a href="#stats" class="navbar__link">Số liệu thống kê</a></li>
+                    <li class="navbar__item"><a href="#contact" class="navbar__link">Liên hệ</a></li>
+                </ul>
+                <div class="navbar__actions">
+                    <a href="#products" class="btn btn--primary">Khám phá ngay</a>
+                    <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero / Header Banner -->
+        <div class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <span class="hero__badge"><i class="fa-solid fa-bolt"></i> Siêu phẩm công nghệ 2026</span>
+                    <h1 class="hero__title">Trải Nghiệm Công Nghệ Đỉnh Cao & Đột Phá</h1>
+                    <p class="hero__desc">Khám phá các thiết bị thông minh thế hệ mới, tối ưu hóa hiệu suất làm việc và nâng tầm trải nghiệm sống của bạn mỗi ngày.</p>
+                    <div class="hero__buttons">
+                        <a href="#products" class="btn btn--primary btn--large">
+                            <i class="fa-solid fa-cart-shopping"></i> Xem sản phẩm
+                        </a>
+                        <a href="#stats" class="btn btn--outline btn--large">
+                            <i class="fa-solid fa-chart-line"></i> Về chúng tôi
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <div class="hero__image-wrapper">
+                        <img src="images/hero.jpg" alt="Hero Banner" class="hero__image">
+                        <div class="hero__float-card">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <div>
+                                <strong>Bảo hành chính hãng</strong>
+                                <span>24 tháng 1 đổi 1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. PHẦN SẢN PHẨM NỔI BẬT (FEATURED PRODUCTS) -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-header__tag">Bộ sưu tập cao cấp</span>
+                <h2 class="section-header__title">Sản Phẩm Nổi Bật</h2>
+                <p class="section-header__desc">Những thiết bị công nghệ bán chạy nhất được tuyển chọn kỹ lưỡng với mức giá ưu đãi đặc biệt dành cho bạn.</p>
+            </div>
+
+            <div class="products__grid">
+                <!-- Sản phẩm 1 -->
+                <div class="product-card">
+                    <div class="product-card__badge product-card__badge--hot">Bán chạy</div>
+                    <div class="product-card__thumb">
+                        <img src="images/iphone.jpg" alt="iPhone 15 Pro Max">
+                    </div>
+                    <div class="product-card__body">
+                        <div class="product-card__category">Smartphone</div>
+                        <h3 class="product-card__title">iPhone 15 Pro Max Titanium</h3>
+                        <div class="product-card__rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(4.9/5 - 340 đánh giá)</span>
+                        </div>
+                        <p class="product-card__desc">Chip A17 Pro mạnh mẽ, camera tiềm vọng 5x, khung titan siêu nhẹ và thời lượng pin vượt trội suốt ngày dài.</p>
+                        <div class="product-card__footer">
+                            <div class="product-card__price">
+                                <span class="product-card__price--current">29.990.000đ</span>
+                                <span class="product-card__price--old">34.990.000đ</span>
+                            </div>
+                            <a href="#" class="btn btn--primary btn--sm">
+                                <i class="fa-solid fa-bag-shopping"></i> Mua ngay
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sản phẩm 2 -->
+                <div class="product-card">
+                    <div class="product-card__badge product-card__badge--new">Mới ra mắt</div>
+                    <div class="product-card__thumb">
+                        <img src="images/computer.png" alt="MacBook Pro M3 Max">
+                    </div>
+                    <div class="product-card__body">
+                        <div class="product-card__category">Laptop / Máy tính</div>
+                        <h3 class="product-card__title">MacBook Pro 16 inch M3 Max</h3>
+                        <div class="product-card__rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span>(4.8/5 - 215 đánh giá)</span>
+                        </div>
+                        <p class="product-card__desc">Màn hình Liquid Retina XDR 120Hz, bộ nhớ đồ họa khủng, xử lý tác vụ đồ họa và lập trình thần tốc.</p>
+                        <div class="product-card__footer">
+                            <div class="product-card__price">
+                                <span class="product-card__price--current">48.990.000đ</span>
+                                <span class="product-card__price--old">52.990.000đ</span>
+                            </div>
+                            <a href="#" class="btn btn--primary btn--sm">
+                                <i class="fa-solid fa-bag-shopping"></i> Mua ngay
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sản phẩm 3 -->
+                <div class="product-card">
+                    <div class="product-card__badge product-card__badge--discount">-15%</div>
+                    <div class="product-card__thumb">
+                        <img src="images/service1.jpg" alt="Workstation Studio Setup">
+                    </div>
+                    <div class="product-card__body">
+                        <div class="product-card__category">Phụ kiện & Dịch vụ</div>
+                        <h3 class="product-card__title">Gói Trải Nghiệm Studio Pro</h3>
+                        <div class="product-card__rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(5.0/5 - 180 đánh giá)</span>
+                        </div>
+                        <p class="product-card__desc">Tích hợp đầy đủ trang thiết bị ngoại vi hiện đại, âm thanh vòm cao cấp và hỗ trợ cài đặt tận nơi 24/7.</p>
+                        <div class="product-card__footer">
+                            <div class="product-card__price">
+                                <span class="product-card__price--current">12.500.000đ</span>
+                                <span class="product-card__price--old">14.700.000đ</span>
+                            </div>
+                            <a href="#" class="btn btn--primary btn--sm">
+                                <i class="fa-solid fa-bag-shopping"></i> Mua ngay
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PHẦN SỐ LIỆU THỐNG KÊ (STATISTICS / COUNTERS) -->
+    <section class="statistics" id="stats">
+        <div class="container">
+            <div class="section-header section-header--light">
+                <span class="section-header__tag">Dấu ấn thành công</span>
+                <h2 class="section-header__title">Số Liệu Thống Kê & Thành Tựu</h2>
+                <p class="section-header__desc">Những con số biết nói minh chứng cho chất lượng dịch vụ và niềm tin của khách hàng trong suốt hành trình phát triển.</p>
+            </div>
+
+            <div class="statistics__grid">
+                <div class="stat-item">
+                    <div class="stat-item__icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="stat-item__number">15,000+</div>
+                    <div class="stat-item__title">Khách hàng tin dùng</div>
+                    <p class="stat-item__desc">Người tiêu dùng cá nhân & doanh nghiệp toàn quốc</p>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-item__icon">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <div class="stat-item__number">99.2%</div>
+                    <div class="stat-item__title">Tỷ lệ hài lòng</div>
+                    <p class="stat-item__desc">Được đánh giá tích cực qua các khảo sát độc lập</p>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-item__icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <div class="stat-item__number">120+</div>
+                    <div class="stat-item__title">Giải thưởng & Chứng chỉ</div>
+                    <p class="stat-item__desc">Chứng nhận chất lượng sản phẩm & dịch vụ xuất sắc</p>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-item__icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div class="stat-item__number">24/7</div>
+                    <div class="stat-item__title">Hỗ trợ kỹ thuật</div>
+                    <p class="stat-item__desc">Đội ngũ kỹ thuật viên luôn sẵn sàng đồng hành</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PHẦN FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__col footer__col--brand">
+                    <a href="#home" class="footer__logo">
+                        <i class="fa-solid fa-cube"></i> Tech<span>Store</span>
+                    </a>
+                    <p class="footer__desc">Hệ thống phân phối thiết bị công nghệ chính hãng hàng đầu, mang đến những trải nghiệm vượt trội cho người dùng Việt Nam.</p>
+                    <div class="footer__socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__heading">Liên kết nhanh</h4>
+                    <ul class="footer__links">
+                        <li><a href="#home"><i class="fa-solid fa-chevron-right"></i> Trang chủ</a></li>
+                        <li><a href="#products"><i class="fa-solid fa-chevron-right"></i> Sản phẩm nổi bật</a></li>
+                        <li><a href="#stats"><i class="fa-solid fa-chevron-right"></i> Số liệu thống kê</a></li>
+                        <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i> Về chúng tôi</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__heading">Chính sách & Hỗ trợ</h4>
+                    <ul class="footer__links">
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Chính sách bảo hành</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Hướng dẫn mua hàng</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Vận chuyển & Giao nhận</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Điều khoản dịch vụ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col footer__col--newsletter">
+                    <h4 class="footer__heading">Đăng ký nhận tin</h4>
+                    <p class="footer__desc">Nhận ngay ưu đãi 10% cho đơn hàng đầu tiên và tin tức công nghệ mới nhất.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký nhận tin!');">
+                        <div class="newsletter-form__group">
+                            <input type="email" placeholder="Nhập email của bạn..." required class="newsletter-form__input">
+                            <button type="submit" class="newsletter-form__btn">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2026 TechStore. All rights reserved. Thiết kế theo tiêu chuẩn CodeGym Front-end Module.</p>
+                <div class="footer__bottom-links">
+                    <a href="#">Bảo mật thông tin</a>
+                    <span>&bull;</span>
+                    <a href="#">Quy chế hoạt động</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript xử lý tương tác Toggle Mobile Menu -->
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        document.querySelectorAll('.navbar__link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

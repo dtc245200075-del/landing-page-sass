@@ -1,0 +1,129 @@
+// ==========================================================================
+// 4. NAVIGATION & NAVBAR (Thanh điều hướng)
+// ==========================================================================
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 76px;
+  background-color: rgba($dark-bg, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba($white, 0.1);
+
+  &__container {
+    height: 100%;
+    @include flex-between;
+  }
+
+  // Logo thương hiệu
+  &__logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: $white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    i {
+      color: $secondary-color;
+      font-size: 26px;
+    }
+
+    span {
+      color: $secondary-color;
+    }
+  }
+
+  // Danh sách liên kết Menu
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    @include respond-to('tablet') {
+      position: absolute;
+      top: 76px;
+      left: 0;
+      width: 100%;
+      background-color: $dark-bg;
+      flex-direction: column;
+      gap: 0;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba($white, 0.1);
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+
+  &__item {
+    @include respond-to('tablet') {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba($white, 0.8);
+    position: relative;
+    padding: 8px 0;
+
+    @include respond-to('tablet') {
+      display: block;
+      padding: 14px 20px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: $secondary-color;
+      @include transition-all;
+
+      @include respond-to('tablet') {
+        display: none;
+      }
+    }
+
+    &:hover,
+    &.active {
+      color: $white;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  // Cụm nút hành động bên phải
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  // Nút Toggle Menu trên màn hình nhỏ
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: $white;
+    font-size: 24px;
+    cursor: pointer;
+
+    @include respond-to('tablet') {
+      display: block;
+    }
+  }
+}

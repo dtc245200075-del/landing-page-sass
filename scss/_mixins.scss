@@ -1,0 +1,56 @@
+// ==========================================================================
+// 2. MIXINS (Tập hợp các Mixin tái sử dụng)
+// ==========================================================================
+
+// Mixin Flexbox canh giữa
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin Flexbox dãn 2 đầu
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Mixin Flexbox xếp dọc
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Mixin tạo kiểu dáng Button
+@mixin button-variant($bg-color, $text-color, $hover-bg) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: $hover-bg;
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Mixin chuyển động mượt mà (Transitions)
+@mixin transition-all($time: $transition-normal) {
+  transition: all $time;
+}
+
+// Mixin xử lý Responsive Media Query
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'mobile' {
+    @media (max-width: $breakpoint-mobile) { @content; }
+  } @else if $breakpoint == 'tablet' {
+    @media (max-width: $breakpoint-tablet) { @content; }
+  } @else if $breakpoint == 'desktop' {
+    @media (max-width: $breakpoint-desktop) { @content; }
+  }
+}

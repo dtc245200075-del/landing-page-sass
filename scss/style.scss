@@ -1,0 +1,28 @@
+// ==========================================================================
+// TỔNG HỢP MÃ NGUỒN SASS / SCSS - LANDING PAGE TEMPLATE REFACTOR
+// Khóa học: CodeGym Frontend Web Development
+// ==========================================================================
+
+// 1. Biến toàn cục (Variables)
+@import 'variables';
+
+// 2. Mixins & Functions
+@import 'mixins';
+
+// 3. Reset & Base Typography
+@import 'base';
+
+// 4. Navigation & Navbar
+@import 'navigation';
+
+// 5. Header & Hero Banner
+@import 'header';
+
+// 6. Featured Products (Sản phẩm nổi bật)
+@import 'products';
+
+// 7. Statistics & Achievements (Số liệu thống kê)
+@import 'statistics';
+
+// 8. Footer (Chân trang)
+@import 'footer';

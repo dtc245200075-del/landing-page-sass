@@ -1,0 +1,135 @@
+// ==========================================================================
+// 3. BASE & COMMON UTILITIES (Reset & Phong cách chung)
+// ==========================================================================
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-dark;
+  background-color: $white;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  @include transition-all;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Khung chứa căn giữa trang (Container)
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+// Nút bấm dùng chung (Button Components)
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: $radius-md;
+  cursor: pointer;
+  @include transition-all;
+
+  &--primary {
+    @include button-variant($primary-color, $white, $primary-hover);
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: $white;
+    border: 2px solid rgba($white, 0.4);
+
+    &:hover {
+      border-color: $white;
+      background-color: rgba($white, 0.1);
+      transform: translateY(-2px);
+    }
+  }
+
+  &--large {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+
+  &--sm {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: $radius-sm;
+  }
+}
+
+// Tiêu đề của từng Section (Section Headers)
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 50px;
+
+  &__tag {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: $primary-color;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 800;
+    color: $text-dark;
+    line-height: 1.25;
+    margin-bottom: 16px;
+
+    @include respond-to('tablet') {
+      font-size: 28px;
+    }
+  }
+
+  &__desc {
+    font-size: 16px;
+    color: $text-muted;
+    line-height: 1.6;
+  }
+
+  // Biến thể cho nền tối
+  &--light {
+    .section-header__tag {
+      color: $secondary-color;
+    }
+    .section-header__title {
+      color: $white;
+    }
+    .section-header__desc {
+      color: rgba($text-light, 0.8);
+    }
+  }
+}
